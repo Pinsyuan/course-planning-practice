@@ -6,7 +6,7 @@
   "dependencies": {
   },
   "scripts": {
-    "start": "cd frontend && yarn start", 
-    "server": "cd backend && yarn server"
+    "start": "cd frontend && npm start", 
+    "server": "cd backend && node server"
   }
 }

@@ -5,8 +5,12 @@
   "license": "MIT",
   "dependencies": {
   },
+  "cacheDirectories": [
+    "node_modules",
+    "frontend/node_modules"
+  ],
   "scripts": {
-    "start": "cd frontend && npm install && npm run build", 
-    "server": "cd backend && node server"
+    "build": "cd frontend && npm install && npm run build", 
+    "start": "cd backend && node server"
   }
 }

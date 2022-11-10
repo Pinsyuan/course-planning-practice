@@ -1,8 +1,8 @@
 import express from 'express'
 import cors from 'cors'
+import path from 'path'
 import courseRoute from './routes/course.js' 
 
-const path = require('path');
 const app = express();
 
 //init middleware

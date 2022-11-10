@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
-import path from 'path'
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import courseRoute from './routes/course.js' 
 
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 //init middleware
 app.use(cors())
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 //define routes
 app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 app.use('/api/course', courseRoute)

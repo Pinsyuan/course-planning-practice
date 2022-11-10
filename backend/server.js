@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { dirname } from 'path';
+import { dirname, path } from 'path';
 import { fileURLToPath } from 'url';
 import courseRoute from './routes/course.js' 
 

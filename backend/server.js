@@ -8,6 +8,7 @@ const app = express();
 app.use(cors())
 
 //define routes
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 app.use('/api/course', courseRoute)
 
 //define server

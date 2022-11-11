@@ -15,8 +15,8 @@ function App() {
   const fetchData = fetch('/course')
       .then(res => {
         console.log(res.json())
-        console.log(res.coursesList)
-        setCoursesList(res.coursesList)
+        console.log(res.json().coursesList)
+        setCoursesList(res.json().coursesList)
       //   if (!res.ok) {
       //     throw new Error(`status ${res.status}`);
       //   }

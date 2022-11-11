@@ -12,18 +12,15 @@ function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [resultCourses, setResultCourses] = useState('');
 
-  const fetchData = fetch('/course')
+  fetch('/course')
       .then(res => {
-        console.log(res.json())
-        console.log(res.json().coursesList)
-        setCoursesList(res.json().coursesList)
-      //   if (!res.ok) {
-      //     throw new Error(`status ${res.status}`);
-      //   }
-      //   return res.json();
-      // }
-      // .then(res => {
-      //   setCoursesList(res.coursesList)
+        return response.json();
+        // console.log(res.json())
+        // console.log(res.json().coursesList)
+        // setCoursesList(res.json().coursesList)
+      })
+      .then(res => {
+        setCoursesList(res.coursesList)
       });
 
   return (

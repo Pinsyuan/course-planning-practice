@@ -14,7 +14,7 @@ function App() {
 
   fetch('/course')
       .then(res => {
-        return response.json();
+        return res.json();
         // console.log(res.json())
         // console.log(res.json().coursesList)
         // setCoursesList(res.json().coursesList)

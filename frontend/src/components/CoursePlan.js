@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { Reorder } from "framer-motion"
 
 function CoursePlan(props) {
-
   const handleDone = () => {
     props.setResultCourses((props.selectedCourses).join(', '))
   }

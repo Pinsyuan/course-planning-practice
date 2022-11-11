@@ -2,15 +2,27 @@ import styled from "styled-components";
 import CourseInfo from './components/CourseInfo';
 import CoursePlan from './components/CoursePlan';
 import './App.css';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { course } from './axios'
 
 function App() {
   const [coursesList, setCoursesList] = useState({});
-  course().then(res => setCoursesList(res))
+  // course().then(res => setCoursesList(res))
 
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [resultCourses, setResultCourses] = useState('');
+
+  const fetchData = fetch('/course')
+      .then(res => {
+        setCoursesList(res.coursesList)
+      //   if (!res.ok) {
+      //     throw new Error(`status ${res.status}`);
+      //   }
+      //   return res.json();
+      // }
+      // .then(res => {
+      //   setCoursesList(res.coursesList)
+      });
 
   return (
     <div className="App">
